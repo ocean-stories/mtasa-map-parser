@@ -1,2 +1,2 @@
 # mtasa-map-parser
-Add in .map file only given category (one of markers, objects, peds, pickups, vehicles, removed objects).
+Adds in .map file listed categories from these: markers, objects, peds, pickups, vehicles, removed objects
