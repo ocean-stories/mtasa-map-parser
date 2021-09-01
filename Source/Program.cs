@@ -34,6 +34,7 @@ namespace MtaSaMapParser
                 {
                     Console.WriteLine("Input example:");
 
+                    // Write examples of input
                     Console.WriteLine($"\t{Shared.ExistingCategories[0]} (or)");
                     Console.WriteLine($"\t{Shared.ExistingCategories[1]} {Shared.ExistingCategories[3]} (or)");
                     Console.WriteLine($"\t{Shared.ExistingCategories[0]} {Shared.ExistingCategories[2]} " +
