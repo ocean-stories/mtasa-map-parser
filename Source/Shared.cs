@@ -1,6 +1,6 @@
-﻿namespace MtaSaMapParser
+﻿namespace Parser
 {
-    static class Shared
+    public static class Shared
     {
         public static readonly string[] ExistingCategories =
         {

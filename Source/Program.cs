@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace MtaSaMapParser
+namespace Parser
 {
-    static class Program
+    internal static class Program
     {
         private static void Main(string[] args)
         {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 
-namespace MtaSaMapParser
+namespace Parser
 {
-    static class Validator
+    public static class Validator
     {
         public static bool ArePathAndExtensionValid(string path)
         {
