@@ -4,14 +4,17 @@
     {
         public static readonly string[] ExistingCategories =
         {
-            "markers",
-            "objects",
-            "peds",
-            "pickups",
-            "vehicles",
-            "removed"
+            "marker",
+            "object",
+            "ped",
+            "pickup",
+            "vehicle",
+            "removeWorldObject"
         };
 
         public const string RequiredExtension = ".map";
+
+        public const string mainOpeningTag = "<map";
+        public const string mainClosingTag = "</map>";
     }
 }
