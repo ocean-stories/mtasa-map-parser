@@ -10,5 +10,3 @@ Usage:
     * pickup
     * vehicle
     * removeWorldObject
-
-Adds in .map file listed categories from these: markers, objects, peds, pickups, vehicles, removed objects.
