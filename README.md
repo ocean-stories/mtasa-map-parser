@@ -1,4 +1,5 @@
 # mtasa-map-parser
+
 Usage:
 1. Install file from last release
 2. Run it
@@ -10,3 +11,7 @@ Usage:
     * pickup
     * vehicle
     * removeWorldObject
+5. Enjoy! (:
+
+Example:
+![](example.jpg)
