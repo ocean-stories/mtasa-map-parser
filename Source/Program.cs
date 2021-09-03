@@ -13,29 +13,35 @@ namespace Parser
                 Console.WriteLine("Input path to file to parse:");
                 pathFrom = Console.ReadLine();
 
+                // Check path for existence and extension to match required
                 if (Validator.ArePathAndExtensionValid(pathFrom))
                     break;
                 else
-                    Console.WriteLine("Inputed path doesn't exist, or file extension doesn't match " +
+                    Console.WriteLine("Inputed path doesn't exist  or file extension doesn't match " +
                                      $"\"{Shared.RequiredExtension}\"");
             }
 
             string[] categoriesToLeave;
             while (true)
             {
-                Console.WriteLine("Input (in one line) categories which you want to copy to new " +
+                Console.WriteLine("Input (in one line) categories which you want to leave " +
                                  $"{Shared.RequiredExtension}-file:");
                 categoriesToLeave = Console.ReadLine().Split(' ');
 
+                // Check does entered categories match existing
                 if (Validator.AreCategoriesValid(categoriesToLeave))
                 {
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("Input example:");
+                    // Write all availavle categories
+                    Console.WriteLine("List of available categories:");
+                    foreach (string availableCategory in Shared.ExistingCategories)
+                        Console.WriteLine($"\t{availableCategory}");
 
                     // Write examples of input
+                    Console.WriteLine("Input example:");
                     Console.WriteLine($"\t{Shared.ExistingCategories[0]} (or)");
                     Console.WriteLine($"\t{Shared.ExistingCategories[1]} {Shared.ExistingCategories[3]} (or)");
                     Console.WriteLine($"\t{Shared.ExistingCategories[0]} {Shared.ExistingCategories[2]} " +
@@ -48,11 +54,12 @@ namespace Parser
                 $@"{Path.GetDirectoryName(pathFrom)}\" +
                 Path.GetFileNameWithoutExtension(pathFrom) +
                 '_' +
-                DateTime.Now.ToString("HH-mm-ss") +
+                DateTime.Now.ToString("dd-MM-yyyy_HH-mm-ss") +
                 Path.GetExtension(pathFrom);
             
             Console.WriteLine($"New {Shared.RequiredExtension}-file — \"{pathTo}\"");
 
+            // Remove categories which wasn't entered
             {
                 using var reader = new StreamReader(pathFrom);
                 using var writer = new StreamWriter(File.Create(pathTo));
