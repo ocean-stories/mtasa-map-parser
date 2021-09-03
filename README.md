@@ -1,2 +1,14 @@
 # mtasa-map-parser
+Usage:
+1. Install file from last release
+2. Run it
+3. Write absolute .map-file path  
+4. Enter name of categories separated by space, here they're:
+    * object
+    * marker
+    * ped
+    * pickup
+    * vehicle
+    * removeWorldObject
+
 Adds in .map file listed categories from these: markers, objects, peds, pickups, vehicles, removed objects.
